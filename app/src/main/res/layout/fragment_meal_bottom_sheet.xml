@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.bottomsheets.MealBottomSheetFragment"
+    android:id="@+id/BottomSheet">
+
+    <ImageView
+        android:id="@+id/img_BottomSheet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"
+        android:src="@color/accent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_BottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/img_BottomSheet">
+
+        <TextView
+            android:id="@+id/txtBottomSheetPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_area"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/myfont"
+            android:text="Position"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtBottomSheetMealName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_area"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/myfont"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtBottomSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/myfont"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/txtBottomSheetLoadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load more..."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/myfont"
+        app:layout_constraintStart_toStartOf="@+id/txtBottomSheetTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtBottomSheetTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
